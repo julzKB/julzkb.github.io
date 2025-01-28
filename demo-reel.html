@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FM4HRFB1B"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-1FM4HRFB1B');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julien Leveugle - Portfolio</title>
+    <title>Demo Reel - Julien Leveugle</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-css/2.0.0/font.min.css">
     <style>
         * {
@@ -25,6 +16,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background-color: #1c1c1c;
             color: #ffffff;
+            min-height: 100vh;
         }
 
         header {
@@ -77,49 +69,29 @@
             text-decoration: none;
         }
 
-        .gallery-container {
+        .video-container {
             margin-top: 120px;
             padding: 0 4rem;
             display: flex;
-            gap: 2rem;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            justify-content: center;
+            align-items: center;
         }
 
-        .gallery-container::-webkit-scrollbar {
-            display: none;
-        }
-
-        .project-card {
-            flex: 0 0 auto;
-            width: 400px;
-            margin-bottom: 2rem;
-        }
-
-        .project-image {
+        .video-wrapper {
             width: 100%;
-            height: 600px;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            transition: transform 0.3s ease;
+            max-width: 1200px;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
         }
 
-        .project-image:hover {
-            transform: scale(1.02);
-        }
-
-        .project-title {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .project-role {
-            color: #888;
-            font-size: 0.9rem;
-            letter-spacing: 0.05em;
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         @media (max-width: 768px) {
@@ -127,16 +99,8 @@
                 padding: 1rem 2rem;
             }
 
-            .gallery-container {
+            .video-container {
                 padding: 0 2rem;
-            }
-
-            .project-card {
-                width: 300px;
-            }
-
-            .project-image {
-                height: 450px;
             }
 
             .nav-links {
@@ -159,28 +123,24 @@
         </div>
     </header>
 
-    <div class="gallery-container">
-        <div class="project-card">
-            <img src="wicked.jpg" alt="Wicked" class="project-image">
-            <h2 class="project-title">Wicked</h2>
-            <p class="project-role">Compositing Supervisor</p>
-        </div>
-        <div class="project-card">
-            <img src="creator.jpg" alt="The Creator" class="project-image">
-            <h2 class="project-title">The Creator</h2>
-            <p class="project-role">Compositing Supervisor</p>
-        </div>
-        <div class="project-card">
-            <img src="avatar.jpg" alt="Avatar The Way of the Water" class="project-image">
-            <h2 class="project-title">Avatar The Way of the Water</h2>
-            <p class="project-role">Lead Compositor</p>
-        </div>
-        <div class="project-card">
-            <img src="jungle_cruise.jpg" alt="Project 4" class="project-image">
-            <h2 class="project-title">Jungle Cruise</h2>
-            <p class="project-role">Lead Compositor</p>
+    <div class="video-container">
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/CqTAnOz3q6g"
+                title="Demo Reel"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
 
+    <!-- Google Analytics Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FM4HRFB1B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1FM4HRFB1B');
+    </script>
 </body>
 </html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            padding: 2rem;
+            gap: 1.5rem;
+            background-color: #fff;
+            margin: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .movie-poster {
+            flex: 0 0 auto;
+            width: 200px;
+            transition: transform 0.3s;
+        }
+
+        .movie-poster:hover {
+            transform: scale(1.05);
+        }
+
+        .movie-poster img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            .movie-poster {
+                width: 150px;
+            }
+
+            .movie-poster img {
+                height: 225px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="gallery">
+        <!-- Replace src with actual movie poster URLs -->
+        <div class="movie-poster">
+            <img src="/api/placeholder/200/300" alt="Movie 1">
+        </div>
+        <div class="movie-poster">
+            <img src="/api/placeholder/200/300" alt="Movie 2">
+        </div>
+        <div class="movie-poster">
+            <img src="/api/placeholder/200/300" alt="Movie 3">
+        </div>
+        <div class="movie-poster">
+            <img src="/api/placeholder/200/300" alt="Movie 4">
+        </div>
+        <div class="movie-poster">
+            <img src="/api/placeholder/200/300" alt="Movie 5">
+        </div>
+        <div class="movie-poster">
+            <img src="/api/placeholder/200/300" alt="Movie 6">
+        </div>
+    </div>
+
+    <!-- Google Analytics Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-TRACKING-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-TRACKING-ID');
+    </script>
+</body>
+</html>
+

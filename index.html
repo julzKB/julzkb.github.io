@@ -41,30 +41,40 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            letter-spacing: 0.2em;
+            font-size: 1.2rem;
+            letter-spacing: 0.5em;
             text-transform: uppercase;
-            font-weight: 400;
+            font-weight: 300;
             color: #ffffff;
             text-decoration: none;
+            padding-right: 0.5em;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
         }
 
         .nav-links a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            transition: opacity 0.3s ease;
+            font-size: 1rem;
+            position: relative;
+            padding-bottom: 4px;
         }
 
-        .nav-links a:hover {
-            opacity: 0.7;
+        .nav-links a.active {
+            text-decoration: none;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #ffffff;
         }
 
         .social-links {
@@ -93,13 +103,13 @@
 
         .project-card {
             flex: 0 0 auto;
-            width: 400px;
+            width: 340px;
             margin-bottom: 2rem;
         }
 
         .project-image {
             width: 100%;
-            height: 600px;
+            height: 510px;
             object-fit: cover;
             margin-bottom: 1rem;
             transition: transform 0.3s ease;
@@ -133,17 +143,11 @@
             }
 
             .project-card {
-            flex: 0 0 auto;
-            width: 340px;
-            margin-bottom: 2rem;
+                width: 255px;
             }
 
             .project-image {
-                width: 100%;
-                height: 510px;
-                object-fit: cover;
-                margin-bottom: 1rem;
-                transition: transform 0.3s ease;
+                height: 383px;
             }
 
             .nav-links {
@@ -156,7 +160,7 @@
     <header>
         <a href="index.html" class="logo">Julien Leveugle</a>
         <nav class="nav-links">
-            <a href="index.html">Visual Effects</a>
+            <a href="index.html" class="active">Visual Effects</a>
             <a href="demo-reel.html">Demo Reel</a>
         </nav>
         <div class="social-links">

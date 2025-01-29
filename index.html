@@ -12,20 +12,32 @@
     </script>
 
     <script>
-        const scrollArrow = document.querySelector('.scroll-arrow');
-        const container = document.querySelector('.gallery-container');
-        
-        scrollArrow.addEventListener('click', () => {
-            container.scrollBy({
-                left: 300,
-                behavior: 'smooth'
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollArrow = document.querySelector('.scroll-arrow');
+            const container = document.querySelector('.gallery-container');
+            
+            // Scroll handler
+            scrollArrow.addEventListener('click', () => {
+                const scrollAmount = Math.min(
+                    container.scrollLeft + container.clientWidth - 100,
+                    container.scrollWidth - container.clientWidth
+                );
+                
+                container.scrollTo({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
             });
-        });
 
-        // Hide arrow when reached the end
-        container.addEventListener('scroll', () => {
-            const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 50;
-            scrollArrow.style.opacity = isAtEnd ? '0' : '';
+            // Hide arrow when reached the end
+            function updateArrowVisibility() {
+                const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 50;
+                scrollArrow.style.opacity = isAtEnd ? '0' : '';
+            }
+
+            container.addEventListener('scroll', updateArrowVisibility);
+            // Also check on window resize
+            window.addEventListener('resize', updateArrowVisibility);
         });
     </script>
     <meta charset="UTF-8">
@@ -235,7 +247,7 @@
             position: relative;
             margin-top: 120px;
         }
-    
+
         .gallery-container {
             padding: 0 4rem;
             display: flex;
@@ -244,41 +256,51 @@
             scrollbar-width: none;
             -ms-overflow-style: none;
         }
-    
+
+        .gallery-container::-webkit-scrollbar {
+            display: none;
+        }
+
         .scroll-arrow {
             position: fixed;
-            right: 2rem;
+            right: 0;
             top: 50%;
             transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.75);
+            border: none;
             cursor: pointer;
             opacity: 0;
-            transition: opacity 0.3s ease, background-color 0.3s ease;
+            transition: all 0.3s ease;
             z-index: 1000;
+            height: 200px;
+            width: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
         }
-    
+
         .gallery-wrapper:hover .scroll-arrow {
             opacity: 1;
         }
-    
+
         .scroll-arrow:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(0, 0, 0, 0.9);
         }
-    
+
         .scroll-arrow svg {
-            width: 24px;
-            height: 24px;
-            fill: white;
+            width: 32px;
+            height: 32px;
+            stroke: white;
         }
-    
+
         @media (max-width: 768px) {
             .scroll-arrow {
                 display: none;
             }
         }
     </style>
+
 </head>
 <body>
     <header>
@@ -442,11 +464,11 @@
             </div>        
         
     <!-- New scroll arrow element -->
-    <div class="scroll-arrow">
-        <svg viewBox="0 0 24 24">
-            <path d="M5 12h14M13 5l7 7-7 7"/>
+    <button class="scroll-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
         </svg>
-    </div>
+    </button>
 </div>
 
     <!-- Add smooth scrolling behavior -->

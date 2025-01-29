@@ -11,35 +11,7 @@
     gtag('config', 'G-1FM4HRFB1B');
     </script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const scrollArrow = document.querySelector('.scroll-arrow');
-            const container = document.querySelector('.gallery-container');
-            
-            // Scroll handler
-            scrollArrow.addEventListener('click', () => {
-                const scrollAmount = Math.min(
-                    container.scrollLeft + container.clientWidth - 100,
-                    container.scrollWidth - container.clientWidth
-                );
-                
-                container.scrollTo({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
-            });
 
-            // Hide arrow when reached the end
-            function updateArrowVisibility() {
-                const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 50;
-                scrollArrow.style.opacity = isAtEnd ? '0' : '';
-            }
-
-            container.addEventListener('scroll', updateArrowVisibility);
-            // Also check on window resize
-            window.addEventListener('resize', updateArrowVisibility);
-        });
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julien Leveugle - Portfolio</title>
@@ -471,14 +443,33 @@
     </button>
 </div>
 
-    <!-- Add smooth scrolling behavior -->
     <script>
-        document.querySelector('.scroll-arrow').addEventListener('click', () => {
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollArrow = document.querySelector('.scroll-arrow');
             const container = document.querySelector('.gallery-container');
-            container.scrollBy({
-                left: 300,
-                behavior: 'smooth'
+            
+            // Scroll handler
+            scrollArrow.addEventListener('click', () => {
+                const scrollAmount = Math.min(
+                    container.scrollLeft + container.clientWidth - 100,
+                    container.scrollWidth - container.clientWidth
+                );
+                
+                container.scrollTo({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
             });
+
+            // Hide arrow when reached the end
+            function updateArrowVisibility() {
+                const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 50;
+                scrollArrow.style.opacity = isAtEnd ? '0' : '';
+            }
+
+            container.addEventListener('scroll', updateArrowVisibility);
+            // Also check on window resize
+            window.addEventListener('resize', updateArrowVisibility);
         });
     </script>
 </body>

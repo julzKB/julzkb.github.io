@@ -101,6 +101,7 @@
             overflow-x: auto;
             scrollbar-width: none;
             -ms-overflow-style: none;
+            position: relative; /* Added for arrow positioning */
         }
 
         .gallery-container::-webkit-scrollbar {
@@ -139,6 +140,39 @@
             letter-spacing: 0.05em;
         }
 
+        /* New scroll arrow styles */
+        .scroll-arrow {
+            position: fixed;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, background-color 0.3s ease;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .scroll-arrow svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        /* Show arrow when hovering near the right edge */
+        .gallery-container:hover ~ .scroll-arrow,
+        .scroll-arrow:hover {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .scroll-arrow:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
         @media (max-width: 768px) {
             header {
                 padding: 1rem 2rem;
@@ -171,6 +205,10 @@
 
             .project-role {
                 font-size: 11px;
+            }
+
+            .scroll-arrow {
+                display: none; /* Hide arrow on mobile */
             }
         }
     </style>
@@ -335,7 +373,22 @@
             <p class="project-role">Lighting TD</p>
         </div>        
         
+    <!-- New scroll arrow element -->
+    <div class="scroll-arrow">
+        <svg viewBox="0 0 24 24">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
     </div>
 
+    <!-- Add smooth scrolling behavior -->
+    <script>
+        document.querySelector('.scroll-arrow').addEventListener('click', () => {
+            const container = document.querySelector('.gallery-container');
+            container.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>

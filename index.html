@@ -13,6 +13,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julien Leveugle - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-css/2.0.0/font.min.css">
     <style>
         * {
@@ -41,13 +43,16 @@
         }
 
         .logo {
-            font-size: 1.2rem;
-            letter-spacing: 0.5em;
+            font-family: "Montserrat", "Century Gothic", Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            font-style: normal;
             text-transform: uppercase;
-            font-weight: 300;
+            letter-spacing: 11px;
+            line-height: 1em;
             color: #ffffff;
             text-decoration: none;
-            padding-right: 0.5em;
+            transition: color 0.5s ease-out;
         }
 
         .nav-links {
@@ -136,6 +141,11 @@
         @media (max-width: 768px) {
             header {
                 padding: 1rem 2rem;
+            }
+
+            .logo {
+                font-size: 16px;
+                letter-spacing: 8px;
             }
 
             .gallery-container {

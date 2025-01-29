@@ -10,8 +10,6 @@
 
     gtag('config', 'G-1FM4HRFB1B');
     </script>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julien Leveugle - Portfolio</title>
@@ -214,65 +212,6 @@
             }
         }
     </style>
-    <style>
-        .gallery-wrapper {
-            position: relative;
-            margin-top: 120px;
-        }
-
-        .gallery-container {
-            padding: 0 4rem;
-            display: flex;
-            gap: 2rem;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-
-        .gallery-container::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scroll-arrow {
-            position: fixed;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.75);
-            border: none;
-            cursor: pointer;
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            height: 200px;
-            width: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-        }
-
-        .gallery-wrapper:hover .scroll-arrow {
-            opacity: 1;
-        }
-
-        .scroll-arrow:hover {
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-
-        .scroll-arrow svg {
-            width: 32px;
-            height: 32px;
-            stroke: white;
-        }
-
-        @media (max-width: 768px) {
-            .scroll-arrow {
-                display: none;
-            }
-        }
-    </style>
-
 </head>
 <body>
     <header>
@@ -297,179 +236,158 @@
         </div>
     </header>
 
-    <div class="gallery-wrapper">
-        <div class="gallery-container">
-            <div class="project-card">
-                <img src="images/wicked.jpg" alt="Wicked" class="project-image">
-                <h2 class="project-title">Wicked</h2>
-                <p class="project-role">Compositing Supervisor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/creator.jpg" alt="The Creator" class="project-image">
-                <h2 class="project-title">The Creator</h2>
-                <p class="project-role">Compositing Supervisor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/avatar.jpg" alt="Avatar The Way of the Water" class="project-image">
-                <h2 class="project-title">Avatar The Way of the Water</h2>
-                <p class="project-role">Lead Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/jungle_cruise.jpg" alt="Project 4" class="project-image">
-                <h2 class="project-title">Jungle Cruise</h2>
-                <p class="project-role">Lead Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/alita.jpg" alt="Alita" class="project-image">
-                <h2 class="project-title">Alita Battle Angel</h2>
-                <p class="project-role">Lead Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/valerian.jpg" alt="Valerian" class="project-image">
-                <h2 class="project-title">Valerian</h2>
-                <p class="project-role">Lead Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/apes.jpg" alt="Apes" class="project-image">
-                <h2 class="project-title">War for the Planet of the Apes</h2>
-                <p class="project-role">Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/spectral.jpg" alt="Spectral" class="project-image">
-                <h2 class="project-title">Spectral</h2>
-                <p class="project-role">Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/bfg.jpg" alt="BFG" class="project-image">
-                <h2 class="project-title">The BFG</h2>
-                <p class="project-role">Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/jungle_book.jpg" alt="Jungle Book" class="project-image">
-                <h2 class="project-title">The Jungle Book</h2>
-                <p class="project-role">Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/maze.jpg" alt="Maze Runner" class="project-image">
-                <h2 class="project-title">Maze Runner The Scroch Trials</h2>
-                <p class="project-role">Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/monk.jpg" alt="Monk" class="project-image">
-                <h2 class="project-title">Monk Comes Down The Mountain</h2>
-                <p class="project-role">Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/avengers.jpg" alt="Avengers" class="project-image">
-                <h2 class="project-title">Avengers Age of Ultron</h2>
-                <p class="project-role">Lead Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/unbroken.jpg" alt="Unbroken" class="project-image">
-                <h2 class="project-title">Unbroken</h2>
-                <p class="project-role">Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/xmen.jpg" alt="Xmen" class="project-image">
-                <h2 class="project-title">X Men Days of Future Past</h2>
-                <p class="project-role">Lead Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/lego.jpg" alt="The Lego Movie" class="project-image">
-                <h2 class="project-title">The Lego Movie</h2>
-                <p class="project-role">Compositing Supervisor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/wwd.jpg" alt="WWD" class="project-image">
-                <h2 class="project-title">Walking With Dinosaurs</h2>
-                <p class="project-role">Compositing Supervisor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/happy2.jpg" alt="HF2" class="project-image">
-                <h2 class="project-title">Happy Feet 2</h2>
-                <p class="project-role">Lead Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/hp.jpg" alt="HP" class="project-image">
-                <h2 class="project-title">Harry Potter and the Deathly Hallows, Part 2</h2>
-                <p class="project-role">Lead Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/guardians.jpg" alt="Guardians" class="project-image">
-                <h2 class="project-title">Legend of the Guardians</h2>
-                <p class="project-role">Compositing Supervisor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/knowing.jpg" alt="Knowing" class="project-image">
-                <h2 class="project-title">Knowing</h2>
-                <p class="project-role">Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/fools_gold.jpg" alt="Fools Gold" class="project-image">
-                <h2 class="project-title">Fools Gold</h2>
-                <p class="project-role">Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/black_balloon.jpg" alt="Black Balloon" class="project-image">
-                <h2 class="project-title">The Black Balloon</h2>
-                <p class="project-role">Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/28.jpg" alt="28 Weeks" class="project-image">
-                <h2 class="project-title">28 Weeks Later</h2>
-                <p class="project-role">Compositor</p>
-            </div>
-            <div class="project-card">
-                <img src="images/happy.jpg" alt="HF" class="project-image">
-                <h2 class="project-title">Happy Feet</h2>
-                <p class="project-role">Lead Lighting TD</p>
-            </div>
-            <div class="project-card">
-                <img src="images/stealth.jpg" alt="Stealth" class="project-image">
-                <h2 class="project-title">Stealth</h2>
-                <p class="project-role">Lighting TD</p>
-            </div>
-            <div class="project-card">
-                <img src="images/immortal.jpg" alt="immortal" class="project-image">
-                <h2 class="project-title">Immortal Ad Vitam</h2>
-                <p class="project-role">Lighting TD</p>
-            </div>        
+    <div class="gallery-container">
+        <div class="project-card">
+            <img src="images/wicked.jpg" alt="Wicked" class="project-image">
+            <h2 class="project-title">Wicked</h2>
+            <p class="project-role">Compositing Supervisor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/creator.jpg" alt="The Creator" class="project-image">
+            <h2 class="project-title">The Creator</h2>
+            <p class="project-role">Compositing Supervisor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/avatar.jpg" alt="Avatar The Way of the Water" class="project-image">
+            <h2 class="project-title">Avatar The Way of the Water</h2>
+            <p class="project-role">Lead Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/jungle_cruise.jpg" alt="Project 4" class="project-image">
+            <h2 class="project-title">Jungle Cruise</h2>
+            <p class="project-role">Lead Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/alita.jpg" alt="Alita" class="project-image">
+            <h2 class="project-title">Alita Battle Angel</h2>
+            <p class="project-role">Lead Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/valerian.jpg" alt="Valerian" class="project-image">
+            <h2 class="project-title">Valerian</h2>
+            <p class="project-role">Lead Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/apes.jpg" alt="Apes" class="project-image">
+            <h2 class="project-title">War for the Planet of the Apes</h2>
+            <p class="project-role">Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/spectral.jpg" alt="Spectral" class="project-image">
+            <h2 class="project-title">Spectral</h2>
+            <p class="project-role">Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/bfg.jpg" alt="BFG" class="project-image">
+            <h2 class="project-title">The BFG</h2>
+            <p class="project-role">Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/jungle_book.jpg" alt="Jungle Book" class="project-image">
+            <h2 class="project-title">The Jungle Book</h2>
+            <p class="project-role">Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/maze.jpg" alt="Maze Runner" class="project-image">
+            <h2 class="project-title">Maze Runner The Scroch Trials</h2>
+            <p class="project-role">Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/monk.jpg" alt="Monk" class="project-image">
+            <h2 class="project-title">Monk Comes Down The Mountain</h2>
+            <p class="project-role">Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/avengers.jpg" alt="Avengers" class="project-image">
+            <h2 class="project-title">Avengers Age of Ultron</h2>
+            <p class="project-role">Lead Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/unbroken.jpg" alt="Unbroken" class="project-image">
+            <h2 class="project-title">Unbroken</h2>
+            <p class="project-role">Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/xmen.jpg" alt="Xmen" class="project-image">
+            <h2 class="project-title">X Men Days of Future Past</h2>
+            <p class="project-role">Lead Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/lego.jpg" alt="The Lego Movie" class="project-image">
+            <h2 class="project-title">The Lego Movie</h2>
+            <p class="project-role">Compositing Supervisor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/wwd.jpg" alt="WWD" class="project-image">
+            <h2 class="project-title">Walking With Dinosaurs</h2>
+            <p class="project-role">Compositing Supervisor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/happy2.jpg" alt="HF2" class="project-image">
+            <h2 class="project-title">Happy Feet 2</h2>
+            <p class="project-role">Lead Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/hp.jpg" alt="HP" class="project-image">
+            <h2 class="project-title">Harry Potter and the Deathly Hallows, Part 2</h2>
+            <p class="project-role">Lead Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/guardians.jpg" alt="Guardians" class="project-image">
+            <h2 class="project-title">Legend of the Guardians</h2>
+            <p class="project-role">Compositing Supervisor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/knowing.jpg" alt="Knowing" class="project-image">
+            <h2 class="project-title">Knowing</h2>
+            <p class="project-role">Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/fools_gold.jpg" alt="Fools Gold" class="project-image">
+            <h2 class="project-title">Fools Gold</h2>
+            <p class="project-role">Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/black_balloon.jpg" alt="Black Balloon" class="project-image">
+            <h2 class="project-title">The Black Balloon</h2>
+            <p class="project-role">Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/28.jpg" alt="28 Weeks" class="project-image">
+            <h2 class="project-title">28 Weeks Later</h2>
+            <p class="project-role">Compositor</p>
+        </div>
+        <div class="project-card">
+            <img src="images/happy.jpg" alt="HF" class="project-image">
+            <h2 class="project-title">Happy Feet</h2>
+            <p class="project-role">Lead Lighting TD</p>
+        </div>
+        <div class="project-card">
+            <img src="images/stealth.jpg" alt="Stealth" class="project-image">
+            <h2 class="project-title">Stealth</h2>
+            <p class="project-role">Lighting TD</p>
+        </div>
+        <div class="project-card">
+            <img src="images/immortal.jpg" alt="immortal" class="project-image">
+            <h2 class="project-title">Immortal Ad Vitam</h2>
+            <p class="project-role">Lighting TD</p>
+        </div>        
         
     <!-- New scroll arrow element -->
-    <button class="scroll-arrow">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
+    <div class="scroll-arrow">
+        <svg viewBox="0 0 24 24">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
         </svg>
-    </button>
-</div>
+    </div>
 
+    <!-- Add smooth scrolling behavior -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const scrollArrow = document.querySelector('.scroll-arrow');
+        document.querySelector('.scroll-arrow').addEventListener('click', () => {
             const container = document.querySelector('.gallery-container');
-            
-            // Scroll handler
-            scrollArrow.addEventListener('click', () => {
-                const scrollAmount = Math.min(
-                    container.scrollLeft + container.clientWidth - 100,
-                    container.scrollWidth - container.clientWidth
-                );
-                
-                container.scrollTo({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
+            container.scrollBy({
+                left: 300,
+                behavior: 'smooth'
             });
-
-            // Hide arrow when reached the end
-            function updateArrowVisibility() {
-                const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 50;
-                scrollArrow.style.opacity = isAtEnd ? '0' : '';
-            }
-
-            container.addEventListener('scroll', updateArrowVisibility);
-            // Also check on window resize
-            window.addEventListener('resize', updateArrowVisibility);
         });
     </script>
 </body>
